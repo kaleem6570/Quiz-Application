@@ -27,10 +27,10 @@ public class Login extends JFrame{
          name.setFont(new Font("system", Font.BOLD,20));
          add(name);
          
-        /*  name1  = new JTextField();
+        name1  = new JTextField();
          name1.setBounds(700,145,200,20);
          name1.setFont(new Font("system", Font.BOLD,20));
-         add(name1);*/
+         add(name1);
         
          getContentPane().setBackground(Color.WHITE);
         
