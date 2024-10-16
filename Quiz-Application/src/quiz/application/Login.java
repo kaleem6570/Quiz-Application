@@ -3,7 +3,7 @@ package quiz.application;
 import java.awt.*;
 import javax.swing.*;
 public class Login extends JFrame{
-    JLabel name;
+    JLabel name,cap;
     JTextField name1;
     Login(){
         setLayout(null);
@@ -16,10 +16,21 @@ public class Login extends JFrame{
         image.setBounds(0,10,550,500);
         add(image);
         
-         name  = new JLabel("Name");
-         name.setBounds(100,140,100,35);
-         name.setFont(new Font("System", Font.BOLD,20));
+        cap = new JLabel("Play on!");
+         cap.setBounds(700,50,400,45);
+         cap.setFont(new Font("Impact", Font.BOLD, 40));
+          cap.setForeground(new Color(128, 0, 128));         
+         add(cap);
+        
+         name  = new JLabel("Name:");
+         name.setBounds(600,135,100,35);
+         name.setFont(new Font("Viner Hand ITC", Font.BOLD,20));
          add(name);
+         
+         name1  = new JTextField();
+         name1.setBounds(700,145,200,20);
+         name1.setFont(new Font("Viner Hand ITC", Font.BOLD,20));
+         add(name1);
         
          getContentPane().setBackground(Color.WHITE);
         
