@@ -16,10 +16,10 @@ public class Login extends JFrame{
         image.setBounds(0,10,550,500);
         add(image);
         
-        /* name  = new JLabel("Name");
+         name  = new JLabel("Name");
          name.setBounds(100,140,100,35);
          name.setFont(new Font("System", Font.BOLD,20));
-         add(name);*/
+         add(name);
         
          getContentPane().setBackground(Color.WHITE);
         
