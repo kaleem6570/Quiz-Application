@@ -2,9 +2,11 @@
 package quiz.application;
 import java.awt.*;
 import javax.swing.*;
-public class Login extends JFrame{
+import java.awt.event.*;
+public class Login extends JFrame implements ActionListener{
     JLabel name,cap;
     JTextField name1;
+    JButton Enter,Back;
     Login(){
         setLayout(null);
         setTitle("Quiz");
@@ -23,21 +25,43 @@ public class Login extends JFrame{
          add(cap);
         
          name  = new JLabel("Name:");
-         name.setBounds(600,135,100,35);
+         name.setBounds(610,135,100,35);
          name.setFont(new Font("system", Font.BOLD,20));
+          name.setForeground(new Color(128, 0, 128));       
          add(name);
          
         name1  = new JTextField();
-         name1.setBounds(700,145,200,20);
+         name1.setBounds(680,145,200,20);
          name1.setFont(new Font("system", Font.BOLD,20));
          add(name1);
+        Enter = new JButton("Enter");
+        Enter.setBounds(640, 200, 100, 20);
+        Enter.setBackground(new Color(128, 0, 128)); 
+        Enter.setForeground(Color.WHITE);
+        Enter.addActionListener(this);
+        add(Enter);
         
+        Back = new JButton("Back");
+        Back.setBounds(780, 200, 100, 20);
+        Back.setBackground(new Color(128, 0, 128)); 
+        Back.setForeground(Color.WHITE);
+          Back.addActionListener(this);
+        add(Back);
          getContentPane().setBackground(Color.WHITE);
         
          setSize(1000,490);
          setLocation(300,200);
          setVisible(true);
        
+    }
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource()=="Enter"){
+            
+        }
+        else if(ae.getSource()==Back){
+            
+            System.exit(0);
+        }
     }
     public static void main(String args[]){
         new Login();
