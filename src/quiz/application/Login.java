@@ -32,7 +32,7 @@ public class Login extends JFrame implements ActionListener{
          
         name1  = new JTextField();
          name1.setBounds(680,145,200,20);
-         name1.setFont(new Font("system", Font.BOLD,20));
+         name1.setFont(new Font("system", Font.BOLD,18));
          add(name1);
         Enter = new JButton("Enter");
         Enter.setBounds(640, 200, 100, 20);
@@ -55,13 +55,25 @@ public class Login extends JFrame implements ActionListener{
        
     }
     public void actionPerformed(ActionEvent ae){
-        if(ae.getSource()=="Enter"){
+         String name =name1.getText();
+        if(ae.getSource()==Enter){
             
+            setVisible(false);
+            new Rules(name);
         }
         else if(ae.getSource()==Back){
             
             System.exit(0);
         }
+       
+       try{
+           if(name.equals("")){
+               JOptionPane.showMessageDialog(null,"Enter the name");
+           }
+       }
+       catch(Exception e){
+           System.out.println(e);
+       }
     }
     public static void main(String args[]){
         new Login();
