@@ -58,7 +58,7 @@ String name;
         if(ae.getSource()==play){
             
             setVisible(false);
-            new Rules(name);
+           new Quiz(name).setVisible(true);
         }
         else if(ae.getSource()==back){
             

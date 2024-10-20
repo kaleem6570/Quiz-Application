@@ -18,8 +18,8 @@ public class Login extends JFrame implements ActionListener{
         image.setBounds(0,10,550,500);
         add(image);
         
-        cap = new JLabel("Play on!");
-         cap.setBounds(700,50,400,45);
+        cap = new JLabel("Java Expert");
+         cap.setBounds(680,50,400,45);
          cap.setFont(new Font("Impact", Font.BOLD, 40));
           cap.setForeground(new Color(128, 0, 128));         
          add(cap);
